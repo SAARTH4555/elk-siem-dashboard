@@ -1,0 +1,20 @@
+server.name: siem-kibana
+server.host: "0.0.0.0"
+server.port: 5601
+
+elasticsearch.hosts: ["http://elasticsearch:9200"]
+elasticsearch.username: ""
+elasticsearch.password: ""
+
+# Security settings (disabled for development)
+xpack.security.enabled: false
+xpack.encryptedSavedObjects.encryptionKey: "a7a6311933d3503b89bc2dbc36572c33a6c10925682e591bffcab6911c06786d"
+
+# Logging
+logging.appenders.console.type: console
+logging.appenders.console.layout.type: pattern
+logging.root.appenders: ["console"]
+logging.root.level: info
+
+# Maps configuration for geolocation visualization  
+map.includeElasticMapsService: true
